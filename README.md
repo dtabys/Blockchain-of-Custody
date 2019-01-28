@@ -1,2 +1,2 @@
 # BlockChain Of Custody
-A block chain for a chain of custody
+A block chain for "chain of custody"
