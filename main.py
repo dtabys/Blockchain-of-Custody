@@ -23,7 +23,10 @@ if __name__ == '__main__':
 
     checkout = subparsers.add_parser('checkout',
                                      description='Add a new checkout entry to the chain of custody for the given evidence item. Checkout actions may only be performed on evidence items that have already been added to the blockchain.')
-    checkout.add_argument()
+    checkout.add_argument('-i',
+                     type=str,
+                     help='Specifies the evidence item’s identifier. When used with log only blocks with the given item_id are returned. The item ID must be unique within the blockchain. This means you cannot re-add an evidence item once the remove action has been performed on it.',
+                     nargs=1)
 
 
     args = parser.parse_args()
