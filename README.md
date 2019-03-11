@@ -18,36 +18,14 @@ A Chain of Custody form keeps track of:
 
 ## Commands
 
-### Identifiers
-
-   **-c case_id**
-
-   		Specifies the case identifier that the evidence is associated with. Must be a valid UUID. When used with `log` only blocks with the given `case_id` are returned.
-
-
-   **-i item_id**
-
-   		Specifies the evidence item's identifier. When used with `log` only blocks with the given `item_id` are returned. The item ID must be unique within the blockchain. This means you cannot re-add an evidence item once the `remove` action has been performed on it.
-
-
-   **-r, --reverse**
-
-   		Reverses the order of the block entries to show the most recent entries first.
-
-
-   **-n num_entries**
-
-  		When used with ``log``, shows ``num_entries`` number of block entries.
-
-
-   **-y reason, --why reason**
-
-   		Reason for the removal of the evidence item. Must be one of: `DISPOSED`, `DESTROYED`, or `RELEASED`. If the reason given is `RELEASED`, `-o` must also be given.
-
-
-   **-o owner**
-   		
-   		Information about the lawful owner to whom the evidence was released. At this time, text is free-form and does not have any requirements.
+| Identifiers | Description |
+| ----------- | ----------- |
+| -c case_id | Specifies the case identifier that the evidence is associated with. Must be a valid UUID. When used with `log` only blocks with the given `case_id` are returned.
+| -i item_id | Specifies the evidence item's identifier. When used with `log` only blocks with the given `item_id` are returned. The item ID must be unique within the blockchain. This means you cannot re-add an evidence item once the `remove` action has been performed on it. |
+| -r, --reverse | Reverses the order of the block entries to show the most recent entries first. |
+| -n num_entries | When used with ``log``, shows ``num_entries`` number of block entries. |
+| -y reason, --why reason | Reason for the removal of the evidence item. Must be one of: `DISPOSED`, `DESTROYED`, or `RELEASED`. If the reason given is `RELEASED`, `-o` must also be given. |
+| -o owner | Information about the lawful owner to whom the evidence was released. At this time, text is free-form and does not have any requirements. |
 
 ### Adding an item
 
