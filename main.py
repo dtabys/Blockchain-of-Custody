@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import argparse
-import sys
 
 
 def add(args):
@@ -140,8 +139,5 @@ if __name__ == '__main__':
     bchoc_verify = subparsers.add_parser('verify', description='Parse the blockchain and validate all entries.')
     bchoc_verify.set_defaults(func=verify)
 
-    try:
-        args = parser.parse_args()
-        args.func(args)
-    except:
-        sys.exit(-1)
+    args = parser.parse_args()
+    args.func(args)
